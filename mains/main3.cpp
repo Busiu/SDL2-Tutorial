@@ -31,12 +31,12 @@ bool init(){
     //INICJALIZACJA SDL-a
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         cout << "Nie mozna zainicjalizowac video. Error: " << SDL_GetError() << endl;
-        success = false;SDL_WINDOW_SHOWN
+        success = false;
     }
     else{
         //TWORZENIE OKNA
         window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                                  SCREEN_WIDTH, SCREEN_HEIGHT, );
+                                  SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
         if(window == nullptr){
             cout << "Nie mozna zainicjalizowac okna. Error: " << SDL_GetError() << endl;
         }
@@ -54,14 +54,14 @@ bool loadMedia(){
     bool success = true;
 
     //LADOWANIE OBRAZKA "xD"
-    xdSurface = SDL_LoadBMP("Images/XD.bmp");
+    xdSurface = SDL_LoadBMP("Images/bmp/XD.bmp");
     if(xdSurface == nullptr){
         cout << "Nie mozna pobrac obrazka. Error: " << SDL_GetError() << endl;
         success = false;
     }
 
     //LADOWANIE OBRAZKA "xOpuszczamy"
-    xOpuszczamySurface = SDL_LoadBMP("Images/xOpuszczamy.bmp");
+    xOpuszczamySurface = SDL_LoadBMP("Images/bmp/xOpuszczamy.bmp");
     if(xOpuszczamySurface == nullptr){
         cout << "Nie mozna pobrac obrazka. Error: " << SDL_GetError() << endl;
         success = false;

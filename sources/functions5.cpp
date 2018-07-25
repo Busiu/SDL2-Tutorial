@@ -78,42 +78,42 @@ bool loadMedia(){
     bool success = true;
 
     //Load default surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("Images/default.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("Images/bmp/default.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] == nullptr){
         printf("Failed to load default image!\n");
         success = false;
     }
 
     //Load up surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("Images/up.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("Images/bmp/up.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_UP] == nullptr){
         printf("Failed to load up image!\n");
         success = false;
     }
 
     //Load down surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("Images/down.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("Images/bmp/down.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] == nullptr){
         printf("Failed to load down image!\n");
         success = false;
     }
 
     //Load left surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("Images/left.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("Images/bmp/left.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] == nullptr){
         printf("Failed to load left image!\n");
         success = false;
     }
 
     //Load right surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("Images/right.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("Images/bmp/right.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] == nullptr){
         printf("Failed to load right image!\n");
         success = false;
     }
 
     //Load exiting surface
-    xOpuszczamySurface = loadSurface("Images/xOpuszczamy.bmp");
+    xOpuszczamySurface = loadSurface("Images/bmp/xOpuszczamy.bmp");
     if(xOpuszczamySurface == nullptr){
         printf("Failed to load exiting image!\n");
         success = false;

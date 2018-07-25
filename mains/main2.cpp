@@ -47,7 +47,7 @@ bool loadMedia(){
     bool success = true;
 
     //LADOWANIE OBRAZKA
-    xdSurface = SDL_LoadBMP("Images/XD.bmp");
+    xdSurface = SDL_LoadBMP("Images/bmp/XD.bmp");
     if(xdSurface == nullptr){
         cout << "Nie mozna pobrac obrazka. Error: " << SDL_GetError() << endl;
         success = false;
