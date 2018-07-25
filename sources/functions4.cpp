@@ -2,7 +2,7 @@
 // Created by Busiu on 25.07.2018.
 //
 
-#include "../headers/functions5.h"
+#include "../headers/functions4.h"
 
 void close(){
     //free surfaces
@@ -32,7 +32,7 @@ bool init(){
 
     //SDL initialization
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
-        printf("Failed to initialize the video. Error: %s\n", SDL_GetError());
+        cout << "Nie mozna zainicjalizowac video. Error: " << SDL_GetError() << endl;
         success = false;
     }
     else{
@@ -40,7 +40,7 @@ bool init(){
         window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
                                   SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
         if(window == nullptr){
-            printf("Failed to initialize the window. Error: %s\n", SDL_GetError());
+            cout << "Nie mozna zainicjalizowac okna. Error: " << SDL_GetError() << endl;
         }
         else{
             //Combine surface with window
@@ -52,26 +52,13 @@ bool init(){
 }
 
 SDL_Surface* loadSurface(string path){
-    //The final optimized image
-    SDL_Surface* optimazedSurface = nullptr;
-
-    //Load the picture from the path
+    //Loading the picture from the path
     SDL_Surface* loadedSurface = SDL_LoadBMP(path.c_str());
     if(loadedSurface == nullptr){
-        printf("Failed to load the picture. Error: %s\n", SDL_GetError());
-    }
-    else{
-        //Convert surface to screen format
-        optimazedSurface = SDL_ConvertSurface(loadedSurface, screenSurface->format, NULL);
-        if(optimazedSurface == nullptr){
-            printf("Failed to optimize image. Error: %s\n", SDL_GetError());
-        }
-
-        //Get rid of the old loaded surface
-        SDL_FreeSurface(loadedSurface);
+        printf("Nie udalo sie wczytac obrazka. Error: %s\n", SDL_GetError());
     }
 
-    return optimazedSurface;
+    return loadedSurface;
 }
 
 bool loadMedia(){
@@ -122,12 +109,7 @@ bool loadMedia(){
     return success;
 }
 
-void updateWindow(SDL_Surface* stretchedSurface){
-    SDL_Rect stretchedRect;
-    stretchedRect.x = 0;
-    stretchedRect.y = 0;
-    stretchedRect.w = SCREEN_WIDTH;
-    stretchedRect.h = SCREEN_HEIGHT;
-    SDL_BlitScaled(stretchedSurface, nullptr, screenSurface, &stretchedRect);
+void updateWindow(SDL_Surface* surface){
+    SDL_BlitSurface(surface, nullptr, screenSurface, nullptr);
     SDL_UpdateWindowSurface(window);
 }

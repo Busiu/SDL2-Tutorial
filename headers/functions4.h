@@ -2,8 +2,8 @@
 // Created by Busiu on 25.07.2018.
 //
 
-#ifndef SDLTEST_FUNCTIONS5_H
-#define SDLTEST_FUNCTIONS5_H
+#ifndef SDLTEST_FUNCTIONS4_H
+#define SDLTEST_FUNCTIONS4_H
 
 #include <cstdio>
 #include <iostream>
@@ -34,4 +34,4 @@ SDL_Surface* loadSurface(string path);
 bool loadMedia();
 void updateWindow(SDL_Surface* surface);
 
-#endif //SDLTEST_FUNCTIONS5_H
+#endif //SDLTEST_FUNCTIONS4_H
