@@ -13,8 +13,9 @@ void close(){
     //Destroy the window
     freeWindow(window);
 
-    //Abandon the SDL
+    //Abandon the SDL & IMG mode
     SDL_Quit();
+    IMG_Quit();
 }
 
 void freeSurface(SDL_Surface* surface){
@@ -65,42 +66,42 @@ bool loadMedia(){
     bool success = true;
 
     //Load default surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../media/images/png/default.png");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../assets/images/png/default.png");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] == nullptr){
         printf("Failed to load default surface!\n");
         success = false;
     }
 
     //Load up surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../media/images/png/up.png");
+    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../assets/images/png/up.png");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_UP] == nullptr){
         printf("Failed to load up surface!\n");
         success = false;
     }
 
     //Load down surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../media/images/png/down.png");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../assets/images/png/down.png");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] == nullptr){
         printf("Failed to load down surface!\n");
         success = false;
     }
 
     //Load left surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../media/images/png/left.png");
+    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../assets/images/png/left.png");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] == nullptr){
         printf("Failed to load left surface!\n");
         success = false;
     }
 
     //Load right surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../media/images/png/right.png");
+    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../assets/images/png/right.png");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] == nullptr){
         printf("Failed to load right surface!\n");
         success = false;
     }
 
     //Load exiting surface
-    xOpuszczamySurface = loadSurface("../media/images/png/xOpuszczamy.png");
+    xOpuszczamySurface = loadSurface("../assets/images/png/xOpuszczamy.png");
     if(xOpuszczamySurface == nullptr){
         printf("Failed to load exiting image!\n");
         success = false;

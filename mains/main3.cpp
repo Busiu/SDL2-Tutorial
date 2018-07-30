@@ -54,14 +54,14 @@ bool loadMedia(){
     bool success = true;
 
     //LADOWANIE OBRAZKA "xD"
-    xdSurface = SDL_LoadBMP("../media/images/bmp/XD.bmp");
+    xdSurface = SDL_LoadBMP("../assets/images/bmp/XD.bmp");
     if(xdSurface == nullptr){
         cout << "Nie mozna pobrac obrazka. Error: " << SDL_GetError() << endl;
         success = false;
     }
 
     //LADOWANIE OBRAZKA "xOpuszczamy"
-    xOpuszczamySurface = SDL_LoadBMP("../media/images/bmp/xOpuszczamy.bmp");
+    xOpuszczamySurface = SDL_LoadBMP("../assets/images/bmp/xOpuszczamy.bmp");
     if(xOpuszczamySurface == nullptr){
         cout << "Nie mozna pobrac obrazka. Error: " << SDL_GetError() << endl;
         success = false;

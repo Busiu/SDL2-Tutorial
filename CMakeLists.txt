@@ -11,6 +11,6 @@ include_directories(${SDL2_INCLUDE_DIR})
 find_package(SDL_IMAGE REQUIRED)
 include_directories(${SDL2_IMAGE_INCLUDE_DIR})
 
-add_executable(SDLTest mains/main5.cpp sources/functions5.cpp)
+add_executable(SDLTest mains/main7.cpp sources/functions7.cpp)
 
 target_link_libraries(SDLTest ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image)

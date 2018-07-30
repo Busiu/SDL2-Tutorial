@@ -65,42 +65,42 @@ bool loadMedia(){
     bool success = true;
 
     //Load default surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../media/images/bmp/default.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../assets/images/bmp/default.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] == nullptr){
         printf("Failed to load default image!\n");
         success = false;
     }
 
     //Load up surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../media/images/bmp/up.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../assets/images/bmp/up.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_UP] == nullptr){
         printf("Failed to load up image!\n");
         success = false;
     }
 
     //Load down surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../media/images/bmp/down.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../assets/images/bmp/down.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_DOWN] == nullptr){
         printf("Failed to load down image!\n");
         success = false;
     }
 
     //Load left surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../media/images/bmp/left.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../assets/images/bmp/left.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_LEFT] == nullptr){
         printf("Failed to load left image!\n");
         success = false;
     }
 
     //Load right surface
-    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../media/images/bmp/right.bmp");
+    keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../assets/images/bmp/right.bmp");
     if(keyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] == nullptr){
         printf("Failed to load right image!\n");
         success = false;
     }
 
     //Load exiting surface
-    xOpuszczamySurface = loadSurface("../media/images/bmp/xOpuszczamy.bmp");
+    xOpuszczamySurface = loadSurface("../assets/images/bmp/xOpuszczamy.bmp");
     if(xOpuszczamySurface == nullptr){
         printf("Failed to load exiting image!\n");
         success = false;
