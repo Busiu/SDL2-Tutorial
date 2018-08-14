@@ -38,7 +38,7 @@ int main(int argc, char** argv){
                 //Clear screen
                 SDL_RenderClear(renderer);
 
-                //Rencer tecture to screen
+                //Render texture to screen
                 SDL_RenderCopy(renderer, defaultTexture, nullptr, nullptr);
 
                 //Update screen
