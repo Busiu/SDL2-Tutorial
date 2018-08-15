@@ -9,7 +9,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
-#include "enums.h"
+#include "../enums.h"
 
 using namespace std;
 

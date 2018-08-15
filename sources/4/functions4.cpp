@@ -2,7 +2,7 @@
 // Created by Busiu on 25.07.2018.
 //
 
-#include "../headers/functions4.h"
+#include "../../headers/4/functions4.h"
 
 void close(){
     //free surfaces

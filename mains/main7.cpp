@@ -3,7 +3,7 @@
 //
 
 #include "../headers/enums.h"
-#include "../headers/functions7.h"
+#include "../headers/7/functions7.h"
 
 //Global variables
 const int SCREEN_HEIGHT = 720;

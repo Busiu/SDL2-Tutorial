@@ -2,23 +2,7 @@
 // Created by Busiu on 15.08.2018.
 //
 
-#include "../headers/functions10.h"
-
-void close(){
-    //Free loaded images
-    fooTexture.free();
-    backgroundTexture.free();
-
-    //Destroy window
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    window = nullptr;
-    renderer = nullptr;
-
-    //Quit SDL subsystems
-    IMG_Quit();
-    SDL_Quit();
-}
+#include "../../headers/8/functions8.h"
 
 bool init(){
     //Initialization flag
@@ -41,6 +25,7 @@ bool init(){
             //Create renderer for window
             renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
+            //Initialize PNG loading
             int imgFlags = IMG_INIT_PNG;
             if(!(IMG_Init(imgFlags) & imgFlags)){
                 printf("Failed to initialize SDL_Image! Error: %s\n", IMG_GetError());
@@ -53,20 +38,8 @@ bool init(){
 }
 
 bool loadMedia(){
-    //Loading success flag
     bool success = true;
 
-    //Load foo' texture
-    if(!fooTexture.loadFromFile("../assets/textures/png/foo.png")){
-        printf("Failed to load stickman texture image!\n");
-        success = false;
-    }
-
-    //Load background texture
-    if(!backgroundTexture.loadFromFile("../assets/textures/png/background.png")){
-        printf("Failed to load background texture image!\n");
-        success = false;
-    }
-
+    //Nothing to load
     return success;
 }
