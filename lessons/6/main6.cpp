@@ -2,8 +2,8 @@
 // Created by Busiu on 25.07.2018.
 //
 
-#include "../headers/enums.h"
-#include "../headers/5/functions5.h"
+#include "../../headers/enums.h"
+#include "../headers/6/functions6.h"
 
 //Global variables
 const int SCREEN_HEIGHT = 800;
@@ -39,7 +39,7 @@ int main(int argc, char** argv){
                     if(event.type == SDL_QUIT){
                         quit = true;
                     }
-                    //User presses a key
+                        //User presses a key
                     else if(event.type = SDL_KEYDOWN){
                         //Select surfaces based on key press
                         switch(event.key.keysym.sym){

@@ -2,7 +2,7 @@
 // Created by Busiu on 15.08.2018.
 //
 
-#include "../../headers/10/LTexture.h"
+#include "../headers/LTexture.h"
 
 LTexture::LTexture() {
     //Initialize

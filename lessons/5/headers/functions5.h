@@ -2,15 +2,14 @@
 // Created by Busiu on 25.07.2018.
 //
 
-#ifndef SDLTEST_FUNCTIONS6_H
-#define SDLTEST_FUNCTIONS6_H
+#ifndef SDLTEST_FUNCTIONS5_H
+#define SDLTEST_FUNCTIONS5_H
 
 #include <cstdio>
 #include <iostream>
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
 
-#include "../enums.h"
+#include "../../../headers/enums.h"
 
 using namespace std;
 
@@ -35,4 +34,4 @@ SDL_Surface* loadSurface(string path);
 bool loadMedia();
 void updateWindow(SDL_Surface* surface);
 
-#endif //SDLTEST_FUNCTIONS6_H
+#endif //SDLTEST_FUNCTIONS5_H

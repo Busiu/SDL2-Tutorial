@@ -2,7 +2,7 @@
 // Created by Busiu on 30.07.2018.
 //
 
-#include "../headers/enums.h"
+#include "../../headers/enums.h"
 #include "../headers/7/functions7.h"
 
 //Global variables

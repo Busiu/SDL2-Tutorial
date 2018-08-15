@@ -2,7 +2,7 @@
 // Created by Busiu on 15.08.2018.
 //
 
-#include "../headers/10/functions10.h"
+#include "headers/functions10.h"
 
 //Global variables
 const int SCREEN_HEIGHT = 720;
