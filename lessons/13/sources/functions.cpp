@@ -6,7 +6,8 @@
 
 void close(){
     //Free loaded images
-    gachiTexture.free();
+    billyTexture.free();
+    vanTexture.free();
 
     //Destroy window
     SDL_DestroyRenderer(renderer);
@@ -55,9 +56,19 @@ bool loadMedia(){
     //Loading success flag
     bool success = true;
 
-    //Load foo' texture
-    if(!gachiTexture.loadFromFile("../lessons/12/assets/textures/gachi.png")){
-        printf("Failed to load gachi texture!\n");
+    //Load Van's texture
+    if(!vanTexture.loadFromFile("../lessons/13/assets/textures/van.png")){
+        printf("Failed to load Van's texture!\n");
+        success = false;
+    }
+    else{
+        //Set standard alpha blending
+        vanTexture.setBlendMode(SDL_BLENDMODE_BLEND);
+    }
+
+    //Load background (Billy's) texture
+    if(!billyTexture.loadFromFile("../lessons/13/assets/textures/billy.png")){
+        printf("Failed to load background (Billy's) texture!\n");
         success = false;
     }
 
