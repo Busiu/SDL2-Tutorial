@@ -1,5 +1,5 @@
 //
-// Created by Busiu on 16.08.2018.
+// Created by Busiu on 17.08.2018.
 //
 
 #ifndef SDLTEST_FUNCTIONS_H
@@ -22,9 +22,7 @@ extern bool quit;
 extern SDL_Window* window;
 extern SDL_Renderer* renderer;
 
-extern const int WALKING_ANIMATION_FRAMES;
-extern SDL_Rect* spriteClips;
-extern LTexture spriteSheetTexture;
+extern LTexture vanTexture;
 
 //Functions in alphabetical order
 void close();
