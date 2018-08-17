@@ -11,6 +11,6 @@ include_directories(${SDL2_INCLUDE_DIR})
 find_package(SDL_IMAGE REQUIRED)
 include_directories(${SDL2_IMAGE_INCLUDE_DIR})
 
-add_executable(SDLTest lessons/13/main.cpp lessons/13/sources/functions.cpp lessons/13/sources/LTexture.cpp)
+add_executable(SDLTest lessons/14/main.cpp lessons/14/sources/functions.cpp lessons/14/sources/LTexture.cpp)
 
 target_link_libraries(SDLTest ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image)
