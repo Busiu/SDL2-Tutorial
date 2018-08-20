@@ -1,0 +1,21 @@
+//
+// Created by Busiu on 20.08.2018.
+//
+
+#ifndef SDLTEST_BUTTONINFO_H
+#define SDLTEST_BUTTONINFO_H
+
+//Button constants
+const int BUTTON_WIDTH = 300;
+const int BUTTON_HEIGHT = 200;
+const int TOTAL_BUTTONS = 4;
+
+enum LButtonSprite{
+    BUTTON_SPRITE_MOUSE_OUT = 0x0000,
+    BUTTON_SPRITE_MOUSE_OVER_MOTION,
+    BUTTON_SPRITE_MOUSE_DOWN,
+    BUTTON_SPRITE_MOUSE_UP,
+    BUTTON_SPRITE_TOTAL
+};
+
+#endif //SDLTEST_BUTTONINFO_H
