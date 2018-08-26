@@ -14,7 +14,7 @@ include_directories(${SDL2_IMAGE_INCLUDE_DIR})
 find_package(SDL_TTF REQUIRED)
 include_directories(${SDL2TTF_INCLUDE_DIR})
 
-add_executable(SDLTest lessons/22/main.cpp lessons/22/sources/functions.cpp
-        lessons/22/sources/LTexture.cpp)
+add_executable(SDLTest lessons/23/main.cpp lessons/23/sources/functions.cpp
+        lessons/23/sources/LTexture.cpp lessons/23/sources/LTimer.cpp)
 
 target_link_libraries(SDLTest ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${SDL2_TTF_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf)
